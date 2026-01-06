@@ -4,9 +4,18 @@
 
 @theme {
   --font-montserrat: "Montserrat", sans-serif;
+
+  /* Colors */
+  --color-clear: #f0ebe1;
+  --color-dark: #262522;
+  --color-primary-2: #f29c33;
+  --color-primary-3: #ee6352;
+  --color-primary-4: #c4e5fc;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  color: #262522;
+  background: var(--color-clear);
 }
