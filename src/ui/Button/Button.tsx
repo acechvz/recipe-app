@@ -14,13 +14,12 @@ const buttonVariants = {
   [ButtonVariants.Tertiary]: "bg-primary-2 text-black",
 };
 
-export function Button({
-  children,
-  variant = "primary",
-}: {
+interface ButtonProps {
   children: React.ReactNode;
   variant?: ButtonVariant;
-}) {
+}
+
+export function Button({ children, variant = "primary" }: ButtonProps) {
   const buttonVariantClasses = buttonVariants[variant];
 
   const classes = {

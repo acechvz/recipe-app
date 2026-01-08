@@ -8,14 +8,17 @@
   /* Colors */
   --color-clear: #f0ebe1;
   --color-dark: #262522;
+  --color-light: #fffbf2;
   --color-primary-2: #f29c33;
   --color-primary-3: #ee6352;
   --color-primary-4: #c4e5fc;
+
+  --text-header-2: 40px;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  color: #262522;
+  color: var(--color-dark);
   background: var(--color-clear);
 }
