@@ -1,29 +1,37 @@
+import type { Recipe } from "../types";
 import { Button } from "../ui/Button/Button";
 
 interface RecipeCardProps {
-  name: string;
-  instructions: string[];
-  prepTimeMinutes: number;
-  servings: number;
-  difficulty: string;
-  image: string;
+  recipe: Recipe;
 }
 
-export function RecipeCard({
-  name,
-  instructions = [],
-  prepTimeMinutes,
-  servings,
-  difficulty,
-  image,
-}: RecipeCardProps) {
+export function RecipeCard({ recipe }: RecipeCardProps) {
+  const {
+    name,
+    instructions = [],
+    prepTimeMinutes,
+    servings,
+    difficulty,
+    image,
+    tags = [],
+  } = recipe;
+  const isVegan = tags.includes("Vegetarian");
+
   return (
     <div className="flex flex-col rounded-4xl overflow-hidden bg-light border border-black/15">
-      <img
-        className="h-56 w-full object-cover object-center"
-        src={image}
-        alt=""
-      />
+      <div className="relative">
+        <img
+          className="h-56 w-full object-cover object-center"
+          src={image}
+          alt=""
+        />
+        {isVegan ? (
+          <img
+            className="absolute -bottom-4 right-6"
+            src="/assets/icons/vegan-tag-icon.svg"
+          />
+        ) : null}
+      </div>
       <div className="p-6 pb-4 flex flex-col grow">
         <div className="grow ">
           <h4 className="text-2xl font-montserrat font-bold mb-3">{name}</h4>
