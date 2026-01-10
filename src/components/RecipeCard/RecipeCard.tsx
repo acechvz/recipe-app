@@ -1,5 +1,5 @@
-import type { Recipe } from "../types";
-import { Button } from "../ui/Button/Button";
+import type { Recipe } from "@/types/app";
+import { Button } from "@/ui/Button/Button";
 
 interface RecipeCardProps {
   recipe: Recipe;

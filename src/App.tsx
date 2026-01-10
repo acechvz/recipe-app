@@ -1,8 +1,7 @@
-import "./App.css";
-import { Header } from "./components/Header";
-import { DiversePalette } from "./modules/home/DiversePalette";
-import { FeaturedRecipes } from "./modules/home/FeaturedRecipes";
-import { HeroSection } from "./modules/home/HeroSection";
+import { Header } from "@/components/Header";
+import { DiversePalette } from "@/modules/home/DiversePalette";
+import { FeaturedRecipes } from "@/modules/home/FeaturedRecipes";
+import { HeroSection } from "@/modules/home/HeroSection";
 
 export function App() {
   return (
