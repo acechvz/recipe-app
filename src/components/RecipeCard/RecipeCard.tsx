@@ -38,7 +38,7 @@ export function RecipeCard({ recipe }: RecipeCardProps) {
           <p className="font-light line-clamp-2">{instructions.join(" ")}</p>
         </div>
         <div className="justify-self-end mt-10 flex items-center gap-3">
-          <span className="text-sm font-medium uppercase grow ">
+          <span className="text-xs font-medium uppercase grow ">
             {prepTimeMinutes} Min - {difficulty} prep - {servings} serves
           </span>
           <Button>View Recipe</Button>

@@ -9,11 +9,22 @@
   --color-clear: #f0ebe1;
   --color-dark: #262522;
   --color-light: #fffbf2;
+  --color-primary-1: #9fdc26;
   --color-primary-2: #f29c33;
   --color-primary-3: #ee6352;
   --color-primary-4: #c4e5fc;
 
   --text-header-2: 40px;
+}
+
+@layer components {
+  /* Typography */
+  .header-2 {
+    @apply text-header-2 font-montserrat uppercase font-bold text-dark leading-none;
+  }
+  .paragraph-2 {
+    @apply font-light text-dark/80 tracking-wide;
+  }
 }
 
 body {
