@@ -37,7 +37,7 @@ export function RecipeCard({ recipe }: RecipeCardProps) {
           <h4 className="text-2xl font-montserrat font-bold mb-3">{name}</h4>
           <p className="font-light line-clamp-2">{instructions.join(" ")}</p>
         </div>
-        <div className="justify-self-end mt-10 flex items-center gap-3">
+        <div className="justify-self-end mt-10 flex flex-col md:flex-row items-stretch md:items-center gap-4 md:gap-3">
           <span className="text-xs font-medium uppercase grow ">
             {prepTimeMinutes} Min - {difficulty} prep - {servings} serves
           </span>

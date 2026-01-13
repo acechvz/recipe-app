@@ -6,19 +6,29 @@ import { useState } from "react";
 import classNames from "classnames";
 import { twMerge } from "tailwind-merge";
 
-const RecipeFilters = {
-  all: "All",
-  vegan: "Vegan",
-  lunch: "Lunch",
-  dinner: "Dinner",
-  breakfast: "Breakfast",
-  dessert: "Dessert",
-  quick_bite: "Quick bite!",
+enum RecipeFilterKeys {
+  All = "all",
+  Vegan = "vegan",
+  Lunch = "lunch",
+  Dinner = "dinner",
+  Breakfast = "breakfast",
+  Dessert = "dessert",
+  QuickBite = "quick_bite",
+}
+
+const recipeFiltersLabelByFilterKey = {
+  [RecipeFilterKeys.All]: "All",
+  [RecipeFilterKeys.Vegan]: "Vegan",
+  [RecipeFilterKeys.Lunch]: "Lunch",
+  [RecipeFilterKeys.Dinner]: "Dinner",
+  [RecipeFilterKeys.Breakfast]: "Breakfast",
+  [RecipeFilterKeys.Dessert]: "Dessert",
+  [RecipeFilterKeys.QuickBite]: "Quick bite!",
 } as const;
 
 export function EmbarkOnJourney() {
-  const [selectedFilter, setSelectedFilter] = useState<string>(
-    RecipeFilters.all
+  const [selectedFilter, setSelectedFilter] = useState<RecipeFilterKeys>(
+    RecipeFilterKeys.All
   );
   const classes = {
     filterButton: (isActive: boolean) =>
@@ -38,20 +48,23 @@ export function EmbarkOnJourney() {
         </p>
       </div>
       <div className="flex items-center justify-center gap-4 my-10 flex-wrap">
-        {Object.entries(RecipeFilters).map(([filterKey, label]) => (
-          <Button
-            key={filterKey}
-            className={twMerge(
-              classes.filterButton(label === selectedFilter),
-              classNames({
-                "bg-primary-1 opacity-100": label === RecipeFilters.all,
-              })
-            )}
-            onClick={() => setSelectedFilter(label)}
-          >
-            {label}
-          </Button>
-        ))}
+        {Object.values(RecipeFilterKeys).map((filterKey) => {
+          console.log(filterKey);
+          return (
+            <Button
+              key={filterKey}
+              className={twMerge(
+                classes.filterButton(filterKey === selectedFilter),
+                classNames({
+                  "bg-primary-1 opacity-100": filterKey === "all",
+                })
+              )}
+              onClick={() => setSelectedFilter(filterKey as RecipeFilterKeys)}
+            >
+              {recipeFiltersLabelByFilterKey[filterKey as RecipeFilterKeys]}
+            </Button>
+          );
+        })}
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {Array(6)

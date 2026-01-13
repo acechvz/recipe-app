@@ -3,6 +3,7 @@ import { DiversePalette } from "@/modules/home/DiversePalette";
 import { FeaturedRecipes } from "@/modules/home/FeaturedRecipes";
 import { HeroSection } from "@/modules/home/HeroSection";
 import { EmbarkOnJourney } from "./modules/home/EmbarkOnJourney/EmbarkOnJourney";
+import { OurCulinaryChronicle } from "./modules/home/OurCulinaryChronicle";
 
 export function App() {
   return (
@@ -12,6 +13,7 @@ export function App() {
       <DiversePalette />
       <FeaturedRecipes />
       <EmbarkOnJourney />
+      <OurCulinaryChronicle />
     </div>
   );
 }

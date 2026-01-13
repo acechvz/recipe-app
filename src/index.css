@@ -20,10 +20,10 @@
 @layer components {
   /* Typography */
   .header-2 {
-    @apply text-header-2 font-montserrat uppercase font-bold text-dark leading-none;
+    @apply text-2xl md:text-header-2 font-montserrat uppercase font-bold text-dark leading-none;
   }
   .paragraph-2 {
-    @apply font-light text-dark/80 tracking-wide;
+    @apply text-sm md:text-base font-light text-dark/80 tracking-wide;
   }
 }
 
