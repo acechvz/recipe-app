@@ -10,17 +10,26 @@
   --color-dark: #262522;
   --color-light: #fffbf2;
   --color-primary-1: #9fdc26;
-  --color-primary-2: #f29c33;
+  --color-pr-imary-2: #f29c33;
   --color-primary-3: #ee6352;
   --color-primary-4: #c4e5fc;
 
   --text-header-2: 40px;
+  --text-headline-1: 80px;
+  --text-paragraph-1: 21px;
 }
 
 @layer components {
   /* Typography */
+  .headline-1 {
+    @apply text-headline-1 font-extrabold font-montserrat uppercase leading-none;
+  }
   .header-2 {
     @apply text-2xl md:text-header-2 font-montserrat uppercase font-bold text-dark leading-none;
+  }
+
+  .paragraph-1 {
+    @apply text-paragraph-1;
   }
   .paragraph-2 {
     @apply text-sm md:text-base font-light text-dark/80 tracking-wide;
