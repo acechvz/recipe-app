@@ -49,7 +49,6 @@ export function EmbarkOnJourney() {
       </div>
       <div className="flex items-center justify-center gap-4 my-10 flex-wrap">
         {Object.values(RecipeFilterKeys).map((filterKey) => {
-          console.log(filterKey);
           return (
             <Button
               key={filterKey}

@@ -1,4 +1,4 @@
-import type { ButtonHTMLAttributes, HTMLAttributes } from "react";
+import type { ButtonHTMLAttributes } from "react";
 import { twMerge } from "tailwind-merge";
 
 export const ButtonVariants = {
@@ -11,8 +11,8 @@ type ButtonVariant = (typeof ButtonVariants)[keyof typeof ButtonVariants];
 
 const buttonVariants = {
   [ButtonVariants.Primary]: "border-black",
-  [ButtonVariants.Secondary]: "bg-dark text-white",
-  [ButtonVariants.Tertiary]: "bg-primary-2 text-black",
+  [ButtonVariants.Secondary]: "bg-dark text-white border-none",
+  [ButtonVariants.Tertiary]: "bg-primary-2 text-black border-none",
 };
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
