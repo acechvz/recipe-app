@@ -38,7 +38,7 @@ export function EmbarkOnJourney() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto w-full mt-21">
+    <div className="w-full mt-21">
       <div className="max-w-md w-full text-center mx-auto">
         <Badge label="Recipes" />
         <h2 className="header-2 mt-2 mb-3">Embark on a journey</h2>

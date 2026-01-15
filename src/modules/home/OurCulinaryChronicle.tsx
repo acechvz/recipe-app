@@ -3,7 +3,7 @@ import { Button } from "@/ui/Button/Button";
 
 export function OurCulinaryChronicle() {
   return (
-    <div className="max-w-7xl mx-auto border border-dark/25 rounded-4xl p-4 flex flex-col md:flex-row gap-2">
+    <div className="border border-dark/25 rounded-4xl p-4 flex flex-col md:flex-row gap-2">
       {/* Sección Izquierda */}
       <div className="flex-2">
         <div className="flex flex-col md:flex-row items-center mb-2 md:mb-0">

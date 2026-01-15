@@ -2,7 +2,7 @@ import { Button } from "@/ui/Button/Button";
 
 export function HeroSection() {
   return (
-    <div className="max-w-7xl mx-auto w-full">
+    <div className="w-full">
       <div className="py-30 text-center bg-[url('./assets/hero-banner.png')] bg-cover text-white relative rounded-4xl overflow-hidden">
         <div className="absolute inset-0 bg-[#26252299]" />
         <div className="w-4x max-w-full mx-auto relative">

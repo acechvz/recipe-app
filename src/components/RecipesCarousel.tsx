@@ -39,7 +39,7 @@ export function RecipesCarousel({
   );
 
   return (
-    <div className="w-full max-w-7xl mx-auto border rounded-4xl border-black/25 p-4 pt-10">
+    <div className="w-full border rounded-4xl border-black/25 p-4 pt-10">
       <div className="flex items-center justify-between mb-10">
         <h2 className="pl-6 header-2 tracking-wide">{title}</h2>
         <div className="inline-flex gap-1">
