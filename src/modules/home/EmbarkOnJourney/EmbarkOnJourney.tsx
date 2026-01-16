@@ -33,7 +33,7 @@ export function EmbarkOnJourney() {
   const classes = {
     filterButton: (isActive: boolean) =>
       classNames("transition", {
-        "opacity-40": !isActive,
+        "bg-primary-1 opacity-100": isActive,
       }),
   };
 
@@ -47,16 +47,14 @@ export function EmbarkOnJourney() {
           every palate.
         </p>
       </div>
-      <div className="flex items-center justify-center gap-4 my-10 flex-wrap">
+      <div className="flex items-center justify-items-start md:justify-center gap-4 my-10 flex-wrap">
         {Object.values(RecipeFilterKeys).map((filterKey) => {
           return (
             <Button
               key={filterKey}
               className={twMerge(
-                classes.filterButton(filterKey === selectedFilter),
-                classNames({
-                  "bg-primary-1 opacity-100": filterKey === "all",
-                })
+                classNames("opacity-40 hover:opacity-100"),
+                classes.filterButton(filterKey === selectedFilter)
               )}
               onClick={() => setSelectedFilter(filterKey as RecipeFilterKeys)}
             >
