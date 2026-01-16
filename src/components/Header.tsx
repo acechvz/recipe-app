@@ -21,11 +21,12 @@ const menuItems = [
 
 export function Header() {
   return (
-    <header className="max-w-7xl w-full border border-solid border-dark/25 px-6 py-4 rounded-[38px] mx-auto flex justify-between items-center">
-      <a href="#">
+    <header className="w-full border border-solid border-dark/25 px-4 md:px-6 py-4 rounded-[38px] mx-auto flex justify-between items-center">
+      <a href="#" className="flex-none">
         <img src="/assets/logo.svg" />
       </a>
-      <nav>
+      {/* TODO: Adjust mobile nav UI */}
+      <nav className="hidden md:block">
         <ul className="flex gap-6">
           {menuItems.map((item) => (
             <li key={item.title}>
@@ -39,7 +40,7 @@ export function Header() {
           ))}
         </ul>
       </nav>
-      <div>
+      <div className="hidden md:block">
         <Button variant="secondary">Subscribe</Button>
       </div>
     </header>

@@ -26,7 +26,7 @@ const listItems = [
 
 export function DiversePalette() {
   return (
-    <div className="grid grid-cols-2 gap-20 bg-primary-4 p-10 rounded-4xl">
+    <div className="grid md:grid-cols-2 gap-16 md:gap-20 bg-primary-4 p-10 rounded-4xl">
       <div className="self-end">
         <Badge label="Explore" />
         {/* <div className="text-sm uppercase font-medium bg-primary-3 inline-flex py-1 px-2 rounded-2xl text-white">

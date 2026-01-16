@@ -54,9 +54,17 @@ export function RecipesCarousel({
         </div>
       ) : (
         <Swiper
+          wrapperClass="flex items-stretch"
           modules={[Navigation]}
-          slidesPerView={2}
-          spaceBetween={16}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 16,
+            },
+          }}
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
@@ -67,7 +75,7 @@ export function RecipesCarousel({
           }}
         >
           {recipes.map((recipe) => (
-            <SwiperSlide key={recipe.name}>
+            <SwiperSlide key={recipe.name} className="h-auto! flex!">
               <RecipeCard recipe={recipe} />
             </SwiperSlide>
           ))}

@@ -2,7 +2,7 @@ import { Button } from "@/ui/Button/Button";
 
 export function SubscribeNow() {
   return (
-    <div className="relative mt-16 py-16 bg-primary-3 rounded-4xl text-center text-white overflow-hidden">
+    <div className="relative mt-16 py-16 px-4 bg-primary-3 rounded-4xl text-center text-white overflow-hidden">
       <img className="absolute top-0" src="./assets/ellipse-vector.svg" />
       <img
         className="absolute bottom-0 -scale-[1]"

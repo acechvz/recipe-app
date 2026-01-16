@@ -22,14 +22,14 @@
 @layer components {
   /* Typography */
   .headline-1 {
-    @apply text-headline-1 font-extrabold font-montserrat uppercase leading-none;
+    @apply text-4xl md:text-headline-1 font-extrabold font-montserrat uppercase leading-none;
   }
   .header-2 {
     @apply text-2xl md:text-header-2 font-montserrat uppercase font-bold text-dark leading-none;
   }
 
   .paragraph-1 {
-    @apply text-paragraph-1;
+    @apply text-base md:text-paragraph-1;
   }
   .paragraph-2 {
     @apply text-sm md:text-base font-light text-dark/80 tracking-wide;
