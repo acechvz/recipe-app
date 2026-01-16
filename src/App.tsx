@@ -5,10 +5,11 @@ import { HeroSection } from "@/modules/home/HeroSection";
 import { EmbarkOnJourney } from "./modules/home/EmbarkOnJourney/EmbarkOnJourney";
 import { OurCulinaryChronicle } from "./modules/home/OurCulinaryChronicle";
 import { SubscribeNow } from "./modules/SubscribeNow";
+import { Footer } from "./components/Footer";
 
 export function App() {
   return (
-    <div className="p-4 flex flex-col gap-4 items-stretch mb-40 max-w-7xl mx-auto">
+    <div className="p-4 flex flex-col gap-4 items-stretch max-w-7xl mx-auto">
       <Header />
       <HeroSection />
       <DiversePalette />
@@ -16,6 +17,7 @@ export function App() {
       <EmbarkOnJourney />
       <OurCulinaryChronicle />
       <SubscribeNow />
+      <Footer />
     </div>
   );
 }
